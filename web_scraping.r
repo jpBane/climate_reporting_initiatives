@@ -11,7 +11,7 @@ n <- 1949 # you need to manually look, how many pages the table has (to be autom
 
 for (i in 1:n){
   df <- read_html(paste0("https://unglobalcompact.org/what-is-gc/participants?page=", i)) %>%
-    html(table)
+    html_table()
   # putting each page of the table into a list
   datalist[i] <- df
   # create a progress indicator
